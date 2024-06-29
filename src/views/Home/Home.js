@@ -7,28 +7,24 @@ import toast, {Toaster} from "react-hot-toast"
 function Home() {
 
     const [todoList, setTodoList] = useState([  ])
-    const [newTask, setNewTask] = useState("")
-  
+    const [newTask, setNewTask] = useState("hii")
     const [categeory, setCategory] = useState("")
+    
+    
+
 
   return (
     <div>
         <h1 className="app-title">To-Do App📝</h1>
         
-        
         <div className="todolist-container">
            {
             todoList.map((todoItem, i)=>{
-                return(
-                    <ToDoCard key={i} todoItem={todoItem}/>
-                )
-
                 const {task, categeory} = todoItem
                 return  <ToDoCard key={i} task={task} categeory={categeory}/>
-
+                
             })
            }
-
            {
             todoList.length === 0
             ? 
@@ -38,7 +34,7 @@ function Home() {
             : null
            }
         </div>
-       
+        
         <div className="add-item-container">
             <input
                 type="text"
@@ -47,7 +43,6 @@ function Home() {
                 value={newTask}
                 onChange={(e)=>setNewTask(e.target.value)}
             />
-
             <select 
                 className="categeory-select" 
                 value={categeory} 
@@ -62,7 +57,6 @@ function Home() {
                 <option value="Health">Health</option>
                 <option value="Other">Other</option>
             </select>
-
             <img 
                 src={add} 
                 alt="add-btn" 
@@ -72,7 +66,6 @@ function Home() {
                         toast.error('Task Can not be Empty')
                         return
                     }
-                    setTodoList([...todoList, newTask])
                     if(categeory === ""){
                         toast.error('Category Can not be Empty')
                         return
