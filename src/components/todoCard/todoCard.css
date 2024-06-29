@@ -6,13 +6,13 @@
     border: 1px solid gray;
     font-size: 20px;  
     position: relative;
-    background-color: rgb(145, 240, 180);
-}
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);}
 .category{
     position: absolute;
     top: 5px;
     right: 5px;
-    background-color: white;
+    background-color: rgb(229, 213, 213);
     font-size: 16px;
     padding: 2px 5px;
     width: 60px;
