@@ -1,6 +1,6 @@
 import "./todoCard.css"
-
-function todoCard({task,categeory}) {
+import bin from "./image.png"
+function todoCard({index,task,categeory,deleteItem}) {
     const Category_Emoji = {
         Sports: "🏏",
         Work: "🧑‍🏭",
@@ -22,11 +22,14 @@ function todoCard({task,categeory}) {
   return (
     <div className="todo-Card">
         {task}
-        <span className="category">
-            {categeory}
-            <span className="category" style={{backgroundColor: Category_Color[categeory]}}></span>
-        {Category_Emoji[categeory]} {categeory}
+       
+        <span className="category categoryy" style={{backgroundColor: Category_Color[categeory]}}>
+            {Category_Emoji[categeory]} {categeory}
         </span>
+            <img src={bin} className="delete-icon categoryy" onClick={()=>{
+                deleteItem(index)
+            }}/>
+
     </div>
   )
 }
