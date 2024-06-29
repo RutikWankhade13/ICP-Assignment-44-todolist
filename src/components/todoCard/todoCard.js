@@ -2,13 +2,13 @@ import "./todoCard.css"
 
 function todoCard({task,categeory}) {
     const Category_Emoji = {
-        Sports: "🏓",
-        Learning: "📚",
-        Work: "💻",
-        Personal: "",
-        Shopping: "🛍️",
-        Health: "🏥",
-        Other: "📁"
+        Sports: "🏏",
+        Work: "🧑‍🏭",
+        Learning: "🏫",
+        Health: "🧑‍⚕️",
+        Personal: "💻",
+        Shopping: "🛒",
+        Other: "😁"
     }
 
   return (
