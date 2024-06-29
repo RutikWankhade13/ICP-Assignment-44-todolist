@@ -21,6 +21,14 @@
     border:1px solid gray;
     font-size: 18px;
 }
+.categeory-select{
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid gray;
+    margin-left: 5px;
+    cursor: pointer;
+}
 .add-icon{
     height: 32px;
     margin-left: 20px;
